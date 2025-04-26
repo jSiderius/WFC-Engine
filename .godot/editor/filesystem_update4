@@ -1,0 +1,3 @@
+res://resizeable_board.tscn
+res://code/tile_manager.gd
+res://code/main.gd
