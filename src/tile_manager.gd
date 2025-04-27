@@ -162,6 +162,7 @@ func _draw() -> void:
 		
 		var t : Tile = tile_grid[y][x]
 		
+		# TODO: Forward this drawing to TILE 
 		if t.entropy == 0 or t.entropy == 1:
 			var callback : Dictionary = tile_splicer.get_drawing_data(wfcConfig.tile_vector[t.get_tile_type()], Vector2i(y, x))
 			draw_texture_rect_region( tile_splicer.tileset_texture, callback["rect"], callback["src_rect"] )

@@ -1,3 +1,5 @@
 res://resizeable_board.tscn
 res://code/tile_manager.gd
 res://code/main.gd
+res://src/wfc_config.gd
+res://src/tile.gd

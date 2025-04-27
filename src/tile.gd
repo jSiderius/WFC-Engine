@@ -11,7 +11,8 @@ var overlay : int
 func _init(_cell_id : int) -> void:
 	constraining_id = _cell_id 
 
-	possibilities = wfcConfig.tile_edges.keys()
+	possibilities = wfcConfig.TileType.values()
+
 	# if constraining_id in wfcConfig.cell_to_tile_options: 
 		# possibilities = wfcConfig.cell_to_tile_options[constraining_id].duplicate()
 	# else:
@@ -39,17 +40,17 @@ func get_entropy() -> int:
 func collapse():
 	var weights : Array[float] = []
 	for possibility in possibilities:
-		if constraining_id in wfcConfig.cell_alt_weightings and possibility in wfcConfig.cell_alt_weightings[constraining_id]:
-			weights.append(wfcConfig.cell_alt_weightings[constraining_id][possibility])
-		else:
-			weights.append(wfcConfig.tile_weights[possibility])
+		# if constraining_id in wfcConfig.cell_alt_weightings and possibility in wfcConfig.cell_alt_weightings[constraining_id]:
+			# weights.append(wfcConfig.cell_alt_weightings[constraining_id][possibility])
+		# else:
+		weights.append(wfcConfig.tile_weights[possibility])
 	
 	possibilities = [possibilities[weighted_random_index(weights)]]
 	entropy = 0
 
 func get_tile_type():
-	if len(possibilities) == 0:
-		return wfcConfig.TileType.TILE_ERROR
+	#if len(possibilities) == 0:
+		#return wfcConfig.TileType.TILE_ERROR
 	
 	return possibilities[0]
 
@@ -73,8 +74,8 @@ func constrain(neighbor_possibilities, direction):
 			reduced = true
 	
 			
-	if len(possibilities) == 0:
-		possibilities = [wfcConfig.TileType.TILE_ERROR]
+	#if len(possibilities) == 0:
+		#possibilities = [wfcConfig.TileType.TILE_ERROR]
 
 	entropy = len(possibilities) if len(possibilities) > 1 else 0
 

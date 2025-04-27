@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwlw0bkdery3f"]
 
-[ext_resource type="Script" path="res://code/main.gd" id="1_i8x8q"]
+[ext_resource type="Script" path="res://src/main.gd" id="1_sw420"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_syhyp"]
 load_path = "res://.godot/imported/tileset.png-a39e944f25b35d62f55d4f98a36e2b5e.ctex"
@@ -16,7 +16,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_i8x8q")
+script = ExtResource("1_sw420")
 
 [node name="BGFall" type="Sprite2D" parent="Control"]
 visible = false
@@ -43,6 +43,7 @@ position = Vector2(600.5, 451)
 scale = Vector2(0.82517, 0.936735)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Control"]
+visible = false
 z_index = -100
 position = Vector2(581, 624)
 scale = Vector2(84.75, 84.75)

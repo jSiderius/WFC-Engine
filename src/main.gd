@@ -25,12 +25,8 @@ func _ready() -> void:
 	# Fill the initial grid
 	tile_manager = TileManager.new(w_h.x, w_h.y, square_size)
 	add_child(tile_manager)
-
-	test_outsidespace_wfc()
-
-func test_outsidespace_wfc():
 	tile_manager.wave_function_collapse_pq()
-	
+
 func find_width_and_height(screen_size : Vector2, square_size : float) -> Vector2i: 
 	''' Takes the screen size and square size and determines the integer size of the screen in terms of squares '''
 
