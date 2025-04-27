@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpq08ow8gbwb"]
+
+[ext_resource type="PackedScene" uid="uid://00a2yunk84nh" path="res://wfc editor/scenes/tile_menu_item.tscn" id="1_hjuvm"]
+[ext_resource type="Texture2D" uid="uid://06f8imfma0f4" path="res://wfc editor/assets/add_box.svg" id="2_ns6p1"]
+[ext_resource type="Script" path="res://wfc editor/scripts/tile_menu_items.gd" id="2_onp4k"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -350.0
+offset_bottom = 236.0
+grow_horizontal = 0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_right = 345.0
+offset_bottom = 224.0
+tab_alignment = 1
+current_tab = 0
+
+[node name="Tiles" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Tiles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Tiles/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TileMenuItems" type="VBoxContainer" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_onp4k")
+
+[node name="Item1" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer/TileMenuItems" instance=ExtResource("1_hjuvm")]
+layout_mode = 2
+
+[node name="Item2" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer/TileMenuItems" instance=ExtResource("1_hjuvm")]
+layout_mode = 2
+
+[node name="Item3" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer/TileMenuItems" instance=ExtResource("1_hjuvm")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSpacer1" type="Control" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddButton" type="TextureButton" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_ns6p1")
+stretch_mode = 5
+
+[node name="HSpacer2" type="Control" parent="TabContainer/Tiles/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Edges" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Edges"]
+visible = false
+layout_mode = 0
+size_flags_vertical = 3
+
+[node name="TileMenuItem" parent="TabContainer/Edges/HBoxContainer" instance=ExtResource("1_hjuvm")]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Edges"]
+visible = false
+layout_mode = 0
+size_flags_vertical = 3
+
+[node name="TileMenuItem" parent="TabContainer/Edges/HBoxContainer2" instance=ExtResource("1_hjuvm")]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Edges"]
+visible = false
+layout_mode = 0
+size_flags_vertical = 3
+
+[node name="TileMenuItem" parent="TabContainer/Edges/HBoxContainer3" instance=ExtResource("1_hjuvm")]
+visible = false
+layout_mode = 2
+
+[node name="Constraining Cells" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[connection signal="pressed" from="TabContainer/Tiles/ScrollContainer/VBoxContainer/HBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="TabContainer/Tiles/ScrollContainer/VBoxContainer/HBoxContainer/AddButton" to="TabContainer/Tiles/ScrollContainer/VBoxContainer/TileMenuItems" method="_on_add_button_pressed"]

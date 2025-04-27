@@ -1,5 +1,15 @@
+res://wfc editor/settings.tscn
+res://level editor/items/tile_menu_item.tscn
+res://level editor/main/level_editor.tscn
 res://resizeable_board.tscn
-res://code/tile_manager.gd
-res://code/main.gd
-res://src/wfc_config.gd
-res://src/tile.gd
+res://wfc editor/level_editor.tscn
+res://level editor/main/item_select.tscn
+res://level editor/items/tile_menu_item.gd
+res://wfc editor/settings.gd
+res://wfc editor/tile_menu_items.gd
+res://wfc editor/tile_menu_item.tscn
+res://wfc editor/level_edit_globalOLD.gd
+res://wfc editor/scenes/level_editor.tscn
+res://wfc editor/scenes/settings.tscn
+res://wfc editor/scenes/tile_menu_item.tscn
+res://wfc editor/scripts/tile_menu_items.gd
