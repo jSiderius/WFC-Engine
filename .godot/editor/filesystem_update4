@@ -24,3 +24,4 @@ res://src/tile.gd
 res://src/main.gd
 res://wfc editor/scenes/spin_box.gd
 res://wfc editor/scripts/tile_menu_item.gd
+res://wfc editor/scripts/spin_box.gd

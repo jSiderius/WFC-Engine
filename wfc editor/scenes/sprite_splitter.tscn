@@ -74,6 +74,8 @@ custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+min_value = -1000.0
+max_value = 1000.0
 alignment = 2
 custom_arrow_step = 10.0
 select_all_on_focus = true
@@ -87,10 +89,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+min_value = -1000.0
 alignment = 2
 update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
+script = ExtResource("2_lh2kq")
 
 [node name="Spacer4" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
@@ -110,10 +114,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
 alignment = 2
 update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
+script = ExtResource("2_lh2kq")
 
 [node name="Spacer6" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
@@ -123,10 +131,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
 alignment = 2
 update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
+script = ExtResource("2_lh2kq")
 
 [node name="Spacer7" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
@@ -145,10 +157,13 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+max_value = 1000.0
+value = 1.0
 alignment = 2
 update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
+script = ExtResource("2_lh2kq")
 
 [node name="Spacer9" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
@@ -158,10 +173,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+max_value = 1000.0
 alignment = 2
 update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
+script = ExtResource("2_lh2kq")
 
 [node name="Header2" type="Panel" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
