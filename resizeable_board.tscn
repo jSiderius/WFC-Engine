@@ -7,7 +7,7 @@ load_path = "res://.godot/imported/tileset.png-a39e944f25b35d62f55d4f98a36e2b5e.
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4bx1"]
 atlas = SubResource("CompressedTexture2D_syhyp")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(0, 0, 16, 8)
 
 [node name="ResizeableBoard" type="Node2D"]
 
@@ -43,7 +43,6 @@ position = Vector2(600.5, 451)
 scale = Vector2(0.82517, 0.936735)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Control"]
-visible = false
 z_index = -100
 position = Vector2(581, 624)
 scale = Vector2(84.75, 84.75)

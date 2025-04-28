@@ -13,3 +13,9 @@ res://wfc editor/scenes/level_editor.tscn
 res://wfc editor/scenes/settings.tscn
 res://wfc editor/scenes/tile_menu_item.tscn
 res://wfc editor/scripts/tile_menu_items.gd
+res://wfc editor/scenes/sprite_splitter.tscn
+res://wfc editor/scenes/sprite_splitter.gd
+res://src/wfc_config.gd
+res://wfc editor/scripts/sprite_splitter.gd
+res://wfc editor/scenes/main_content_scroll.gd
+res://src/tile_splicer.gd

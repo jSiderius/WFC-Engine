@@ -1,7 +1,13 @@
-VBoxContainer
-Control
 TextureButton
+TextEdit
 Button
-HBoxContainer
-TextureRect
 ScrollContainer
+VScrollBar
+HScrollBar
+TextureRect
+Control
+SpinBox
+Label
+HBoxContainer
+Panel
+VBoxContainer
