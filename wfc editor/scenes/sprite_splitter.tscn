@@ -230,10 +230,10 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-scroll_horizontal = 2100
-scroll_vertical = 2330
 
 [node name="MainContent" type="Control" parent="Panel/VBoxContainer/MainContentScroll"]
+z_index = 2
+z_as_relative = false
 clip_contents = true
 custom_minimum_size = Vector2(5000, 5000)
 layout_mode = 2
@@ -242,17 +242,18 @@ mouse_filter = 1
 script = ExtResource("2_dse3f")
 
 [node name="Sprite" type="TextureRect" parent="Panel/VBoxContainer/MainContentScroll/MainContent"]
-z_index = 10
+z_index = 1
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_left = -216.0
+offset_top = -520.0
+offset_right = 216.0
+offset_bottom = 520.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_npxeu")

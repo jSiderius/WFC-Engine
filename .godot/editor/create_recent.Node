@@ -1,3 +1,4 @@
+Control
 TextureButton
 TextEdit
 Button
@@ -5,7 +6,6 @@ ScrollContainer
 VScrollBar
 HScrollBar
 TextureRect
-Control
 SpinBox
 Label
 HBoxContainer

@@ -16,14 +16,13 @@ func _ready():
 
 func _draw():
 	# Draw custom background color
-	draw_rect(Rect2(Vector2(0, 0), size), background_color)
-
+	# draw_rect(Rect2(Vector2(0, 0), size), background_color)
 	var i : int = 0
 	var offset : float = 0.0
 	for x in range(sprite.position.x + grid_spacing_offset.x - grid_spacing_size.x, size.x, grid_spacing_size.x):
 		i+=1
 		offset += 0.0 if i % 2 == 0 else grid_spacing_gap.x
-		draw_line(Vector2(x + offset, 0), Vector2(x + offset, size.y), grid_color)
+		draw_line(Vector2(x + offset, 0), Vector2(x + offset, size.y), grid_color, -2)
 	i = 0
 	offset = 0
 	for x in range(sprite.position.x + grid_spacing_offset.x, 0, -grid_spacing_size.x):

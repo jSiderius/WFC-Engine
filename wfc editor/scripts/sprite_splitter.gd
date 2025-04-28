@@ -72,47 +72,30 @@ var zoom_min : float = 0.5
 var zoom_max : float = 3.0
 func update_zoom():
 	# Apply scale to the content node
-	# main_content.custom_minimum_size = base_size * Vector2(zoom_factor, zoom_factor)
+	# TODO: Scaling
 	main_content.scale = Vector2(zoom_factor, zoom_factor)
 
 	scroll.scroll_horizontal = (main_content.size.x - scroll.size.x) / 2.0
 	scroll.scroll_vertical = (main_content.size.y - scroll.size.y) / 2.0
-	print("update")
-	print(main_content.scale)
-	# queue_redraw()
-
 
 func _on_offset_x_value_changed(value: float) -> void:
 	main_content.grid_spacing_offset.x = value
 	main_content.queue_redraw()
-	print(main_content.grid_spacing_offset)
-	print(value)
-
 func _on_offset_y_value_changed(value: float) -> void:
 	main_content.grid_spacing_offset.y = value
 	main_content.queue_redraw()
-	print(value)
-
 func _on_size_x_value_changed(value: float) -> void:
 	main_content.grid_spacing_size.x = value
 	main_content.queue_redraw()
-	print(value)
-
 
 func _on_size_y_value_changed(value: float) -> void:
 	main_content.grid_spacing_size.y = value
 	main_content.queue_redraw()
-	print(value)
-
 
 func _on_gap_x_value_changed(value: float) -> void:
 	main_content.grid_spacing_gap.x = value
 	main_content.queue_redraw()
-	print(value)
-
 
 func _on_gap_y_value_changed(value: float) -> void:
 	main_content.grid_spacing_gap.y = value
 	main_content.queue_redraw()
-
-	print(value)
