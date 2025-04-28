@@ -16,9 +16,11 @@ func _ready():
 	
 	get_tree().create_timer(.01).timeout.connect(
 		func () -> void:
-			scroll.set_deferred("scroll_vertical", scroll.get_v_scroll_bar().max_value / 2.0 - 165)
-			scroll.set_deferred("scroll_horizontal", scroll.get_h_scroll_bar().max_value / 2.0 - 400)
+			scroll.scroll_horizontal = (main_content.size.x - scroll.size.x) / 2.0
+			scroll.scroll_vertical = (main_content.size.y - scroll.size.y) / 2.0
 	)
+
+	base_size = main_content.size
 
 
 func _process(_delta):
@@ -56,9 +58,61 @@ func _is_in_resize_zone(mouse_pos):
 
 
 func _on_zoom_out_button_pressed() -> void:
-	main_content.scale += Vector2(1.0, 1.0)
+	zoom_factor = min(zoom_factor + 0.1, zoom_max)
+	update_zoom()
 	queue_redraw()
 
 func _on_zoom_in_button_pressed() -> void:
-	main_content.scale -= Vector2(0.5, 0.5)
-	queue_redraw()
+	zoom_factor = max(zoom_factor - 0.1, zoom_min)
+	update_zoom()
+
+var base_size : Vector2
+var zoom_factor : float = 1.0
+var zoom_min : float = 0.5
+var zoom_max : float = 3.0
+func update_zoom():
+	# Apply scale to the content node
+	# main_content.custom_minimum_size = base_size * Vector2(zoom_factor, zoom_factor)
+	main_content.scale = Vector2(zoom_factor, zoom_factor)
+
+	scroll.scroll_horizontal = (main_content.size.x - scroll.size.x) / 2.0
+	scroll.scroll_vertical = (main_content.size.y - scroll.size.y) / 2.0
+	print("update")
+	print(main_content.scale)
+	# queue_redraw()
+
+
+func _on_offset_x_value_changed(value: float) -> void:
+	main_content.grid_spacing_offset.x = value
+	main_content.queue_redraw()
+	print(main_content.grid_spacing_offset)
+	print(value)
+
+func _on_offset_y_value_changed(value: float) -> void:
+	main_content.grid_spacing_offset.y = value
+	main_content.queue_redraw()
+	print(value)
+
+func _on_size_x_value_changed(value: float) -> void:
+	main_content.grid_spacing_size.x = value
+	main_content.queue_redraw()
+	print(value)
+
+
+func _on_size_y_value_changed(value: float) -> void:
+	main_content.grid_spacing_size.y = value
+	main_content.queue_redraw()
+	print(value)
+
+
+func _on_gap_x_value_changed(value: float) -> void:
+	main_content.grid_spacing_gap.x = value
+	main_content.queue_redraw()
+	print(value)
+
+
+func _on_gap_y_value_changed(value: float) -> void:
+	main_content.grid_spacing_gap.y = value
+	main_content.queue_redraw()
+
+	print(value)

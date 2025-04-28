@@ -19,3 +19,7 @@ res://src/wfc_config.gd
 res://wfc editor/scripts/sprite_splitter.gd
 res://wfc editor/scenes/main_content_scroll.gd
 res://src/tile_splicer.gd
+res://src/tile_manager.gd
+res://src/tile.gd
+res://src/main.gd
+res://wfc editor/scenes/spin_box.gd

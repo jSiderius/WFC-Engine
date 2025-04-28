@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cex42gq7xbw5s"]
+[gd_scene load_steps=7 format=3 uid="uid://cex42gq7xbw5s"]
 
 [ext_resource type="Script" path="res://wfc editor/scripts/sprite_splitter.gd" id="1_l8iva"]
 [ext_resource type="Script" path="res://wfc editor/scenes/main_content_scroll.gd" id="2_dse3f"]
-[ext_resource type="Texture2D" uid="uid://b5w5lbt6vu5tp" path="res://icon.svg" id="2_ejpxu"]
+[ext_resource type="Script" path="res://wfc editor/scenes/spin_box.gd" id="2_lh2kq"]
 [ext_resource type="Texture2D" uid="uid://6rr65xe0apqa" path="res://wfc editor/assets/zoom_out.svg" id="2_xa3cx"]
 [ext_resource type="Texture2D" uid="uid://64cstv6u4je8" path="res://wfc editor/assets/zoom_in.svg" id="3_53l1h"]
+[ext_resource type="Texture2D" uid="uid://csthmavorccln" path="res://tileset.png" id="5_npxeu"]
 
 [node name="SpriteSplitter" type="Control"]
 layout_mode = 3
@@ -68,20 +69,28 @@ text = "Offset:
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
-[node name="SpinBox" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+[node name="OffsetX" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+alignment = 2
+custom_arrow_step = 10.0
+select_all_on_focus = true
+script = ExtResource("2_lh2kq")
 
 [node name="Spacer3" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
-[node name="SpinBox2" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+[node name="OffsetY" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+alignment = 2
+update_on_text_changed = true
+custom_arrow_step = 1.0
+select_all_on_focus = true
 
 [node name="Spacer4" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
@@ -97,19 +106,27 @@ text = "Size:
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
-[node name="SpinBox3" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+[node name="SizeX" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+alignment = 2
+update_on_text_changed = true
+custom_arrow_step = 1.0
+select_all_on_focus = true
 
 [node name="Spacer6" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
-[node name="SpinBox4" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+[node name="SizeY" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+alignment = 2
+update_on_text_changed = true
+custom_arrow_step = 1.0
+select_all_on_focus = true
 
 [node name="Spacer7" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
@@ -118,25 +135,33 @@ layout_mode = 2
 [node name="Label3" type="Label" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Spacing:"
+text = "Gap:"
 
 [node name="Spacer8" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
-[node name="SpinBox5" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+[node name="GapX" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+alignment = 2
+update_on_text_changed = true
+custom_arrow_step = 1.0
+select_all_on_focus = true
 
 [node name="Spacer9" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
-[node name="SpinBox6" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+[node name="GapY" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
+alignment = 2
+update_on_text_changed = true
+custom_arrow_step = 1.0
+select_all_on_focus = true
 
 [node name="Header2" type="Panel" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -211,13 +236,13 @@ scroll_vertical = 2330
 [node name="MainContent" type="Control" parent="Panel/VBoxContainer/MainContentScroll"]
 clip_contents = true
 custom_minimum_size = Vector2(5000, 5000)
-layout_direction = 2
 layout_mode = 2
 size_flags_stretch_ratio = 6.0
 mouse_filter = 1
 script = ExtResource("2_dse3f")
 
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/MainContentScroll/MainContent"]
+[node name="Sprite" type="TextureRect" parent="Panel/VBoxContainer/MainContentScroll/MainContent"]
+z_index = 10
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -230,17 +255,7 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ejpxu")
-
-[node name="HScrollBar" type="HScrollBar" parent="Panel/VBoxContainer/MainContentScroll/MainContent"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="VScrollBar" type="VScrollBar" parent="Panel/VBoxContainer/MainContentScroll/MainContent"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+texture = ExtResource("5_npxeu")
 
 [node name="Footer" type="Panel" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -275,5 +290,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
+[connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX" to="Panel" method="_on_offset_x_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY" to="Panel" method="_on_offset_y_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeX" to="Panel" method="_on_size_x_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeY" to="Panel" method="_on_size_y_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapX" to="Panel" method="_on_gap_x_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapY" to="Panel" method="_on_gap_y_value_changed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Header2/HBoxContainer/ZoomOutButton" to="Panel" method="_on_zoom_out_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Header2/HBoxContainer/ZoomInButton" to="Panel" method="_on_zoom_in_button_pressed"]
