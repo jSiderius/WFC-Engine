@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="WFC Engine"
-run/main_scene="res://wfc editor/scenes/sprite_splitter.tscn"
+run/main_scene="res://wfc editor/scenes/settings.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

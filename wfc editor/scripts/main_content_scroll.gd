@@ -11,12 +11,10 @@ var background_color = Color(0.2, 0.2, 0.2)
 @onready var sprite = $Sprite
 
 func _ready():
-	# Update the grid whenever you want to change spacing
 	queue_redraw()
 
 func _draw():
 	# Draw custom background color
-	# draw_rect(Rect2(Vector2(0, 0), size), background_color)
 	var i : int = 0
 	var offset : float = 0.0
 	for x in range(sprite.position.x + grid_spacing_offset.x - grid_spacing_size.x, size.x, grid_spacing_size.x):

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cex42gq7xbw5s"]
 
 [ext_resource type="Script" path="res://wfc editor/scripts/sprite_splitter.gd" id="1_l8iva"]
-[ext_resource type="Script" path="res://wfc editor/scenes/main_content_scroll.gd" id="2_dse3f"]
-[ext_resource type="Script" path="res://wfc editor/scenes/spin_box.gd" id="2_lh2kq"]
+[ext_resource type="Script" path="res://wfc editor/scripts/main_content_scroll.gd" id="2_dse3f"]
+[ext_resource type="Script" path="res://wfc editor/scripts/spin_box.gd" id="2_lh2kq"]
 [ext_resource type="Texture2D" uid="uid://6rr65xe0apqa" path="res://wfc editor/assets/zoom_out.svg" id="2_xa3cx"]
 [ext_resource type="Texture2D" uid="uid://64cstv6u4je8" path="res://wfc editor/assets/zoom_in.svg" id="3_53l1h"]
 [ext_resource type="Texture2D" uid="uid://csthmavorccln" path="res://tileset.png" id="5_npxeu"]
@@ -278,10 +278,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/Footer/HBoxContainer"]
+[node name="Close Button" type="Button" parent="Panel/VBoxContainer/Footer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-mouse_filter = 2
 text = "CLOSE
 "
 
@@ -299,3 +298,4 @@ mouse_filter = 2
 [connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapY" to="Panel" method="_on_gap_y_value_changed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Header2/HBoxContainer/ZoomOutButton" to="Panel" method="_on_zoom_out_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Header2/HBoxContainer/ZoomInButton" to="Panel" method="_on_zoom_in_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Footer/HBoxContainer/Close Button" to="Panel" method="_on_close_button_pressed"]

@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1745797327
+::res://::1745812081
 icon.svg::CompressedTexture2D::4539343540251352093::1745776294::1745776299::1::::<><>::
 README.md::TextFile::-1::1745708508::0::1::::<><>::
-resizeable_board.tscn::PackedScene::8727505253212900549::1745797327::0::1::::<><>::res://src/main.gd
+resizeable_board.tscn::PackedScene::8727505253212900549::1745812081::0::1::::<><>::res://src/main.gd
 tileset.png::CompressedTexture2D::6075910211773932459::1744981513::1745701761::1::::<><>::
 ::res://font/::1745701754
 LICENSE.md::TextFile::-1::1744981513::0::1::::<><>::
@@ -17,7 +17,7 @@ tile_manager.gd::GDScript::-1::1745769819::0::1::::TileManager<>Control<>::
 tile_splicer.gd::GDScript::-1::1745769965::0::1::::TileSplicer<>Control<>::
 wfc_config.gd::GDScript::-1::1745788833::0::1::::<>Node<>::
 ::res://wfc editor/::1745797773
-::res://wfc editor/assets/::1745797773
+::res://wfc editor/assets/::1745797790
 add_box.svg::CompressedTexture2D::1819079756457052939::1745778951::1745782644::1::::<><>::
 delete.svg::CompressedTexture2D::2951785443277471166::1745780328::1745782644::1::::<><>::
 menu.svg::CompressedTexture2D::2778626848933310847::1745780269::1745782646::1::::<><>::
@@ -28,14 +28,15 @@ editor_objectOLD.gd::GDScript::-1::1738516443::0::1::::<>Node2D<>::
 item_textureOLD.gd::GDScript::-1::1738518546::0::1::::<>TextureRect<>::
 level_editorOLD.gd::GDScript::-1::1738542422::0::1::::<>Node2D<>::
 level_edit_globalOLD.gd::GDScript::-1::1745782589::0::1::::<>Node<>::
-::res://wfc editor/scenes/::1745797506
+::res://wfc editor/scenes/::1745812081
 level_editor.tscn::PackedScene::6681849687857228198::1745791318::0::1::::<><>::uid://dpq08ow8gbwb::::res://wfc editor/scenes/settings.tscn
-main_content_scroll.gd::GDScript::-1::1745797326::0::1::::<>Control<>::
-sprite_splitter.tscn::PackedScene::5102886780849072734::1745797506::0::1::::<><>::res://wfc editor/scripts/sprite_splitter.gd<>res://wfc editor/scenes/main_content_scroll.gd<>uid://b5w5lbt6vu5tp::::res://icon.svg
-settings.tscn::PackedScene::242550069898612337::1745797327::0::1::::<><>::uid://00a2yunk84nh::::res://wfc editor/scenes/tile_menu_item.tscn<>uid://06f8imfma0f4::::res://wfc editor/assets/add_box.svg<>res://wfc editor/scripts/tile_menu_items.gd
+main_content_scroll.gd::GDScript::-1::1745811867::0::1::::<>Control<>::
+spin_box.gd::GDScript::-1::1745811032::0::1::::<>SpinBox<>::
+sprite_splitter.tscn::PackedScene::5102886780849072734::1745812113::0::1::::<><>::res://wfc editor/scripts/sprite_splitter.gd<>res://wfc editor/scenes/main_content_scroll.gd<>res://wfc editor/scenes/spin_box.gd<>uid://6rr65xe0apqa::::res://wfc editor/assets/zoom_out.svg<>uid://64cstv6u4je8::::res://wfc editor/assets/zoom_in.svg<>uid://csthmavorccln::::res://tileset.png
+settings.tscn::PackedScene::242550069898612337::1745812081::0::1::::<><>::uid://00a2yunk84nh::::res://wfc editor/scenes/tile_menu_item.tscn<>uid://06f8imfma0f4::::res://wfc editor/assets/add_box.svg<>res://wfc editor/scripts/tile_menu_items.gd
 tile_menu_item.tscn::PackedScene::1806380043299582845::1745791319::0::1::::<><>::res://wfc editor/scripts/tile_menu_item.gd<>uid://bft8twpehoiyp::::res://wfc editor/assets/menu.svg<>uid://b5w5lbt6vu5tp::::res://icon.svg<>uid://bib4qfc8uwwcs::::res://wfc editor/assets/delete.svg<>res://wfc editor/scripts/delete_button.gd
-::res://wfc editor/scripts/::1745796531
+::res://wfc editor/scripts/::1745812023
 delete_button.gd::GDScript::-1::1745780804::0::1::::<>TextureButton<>::
-sprite_splitter.gd::GDScript::-1::1745796723::0::1::::<>Panel<>::
+sprite_splitter.gd::GDScript::-1::1745812023::0::1::::<>Panel<>::
 tile_menu_item.gd::GDScript::-1::1745780915::0::1::::<>HBoxContainer<>::
 tile_menu_items.gd::GDScript::-1::1745782864::0::1::::<>VBoxContainer<>::

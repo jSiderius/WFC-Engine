@@ -25,12 +25,12 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TileMenuItem" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(0, 60)
+[node name="TileSprite" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-texture = ExtResource("3_osawk")
-expand_mode = 2
-metadata/_edit_use_anchors_ = true
+texture_normal = ExtResource("3_osawk")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="Spacer3" type="Control" parent="."]
 layout_mode = 2
@@ -47,4 +47,5 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="TileSprite" to="." method="_on_tile_sprite_pressed"]
 [connection signal="pressed" from="DeleteButton" to="." method="_on_delete_button_pressed"]
