@@ -70,6 +70,7 @@ custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
 [node name="OffsetX" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -86,10 +87,12 @@ custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
 [node name="OffsetY" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 min_value = -1000.0
+max_value = 1000.0
 alignment = 2
 update_on_text_changed = true
 custom_arrow_step = 1.0
@@ -111,6 +114,7 @@ custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
 [node name="SizeX" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -128,6 +132,7 @@ custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
 [node name="SizeY" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -154,6 +159,7 @@ custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
 [node name="GapX" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -170,6 +176,7 @@ custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
 [node name="GapY" type="SpinBox" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2

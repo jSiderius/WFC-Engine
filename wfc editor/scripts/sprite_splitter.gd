@@ -10,6 +10,13 @@ var resize_start_size = Vector2.ZERO
 @onready var scroll = $VBoxContainer/MainContentScroll
 @onready var main_content = $VBoxContainer/MainContentScroll/MainContent
 
+@onready var offset_x : SpinBox = %OffsetX
+@onready var offset_y = %OffsetY
+@onready var size_x = %SizeX
+@onready var size_y = %SizeY
+@onready var gap_x = %GapX
+@onready var gap_y = %GapY
+
 func _ready():
 	scroll.get_v_scroll_bar().size = Vector2(0, 0)
 	scroll.get_v_scroll_bar().custom_minimum_size.x = 0
@@ -22,6 +29,12 @@ func _ready():
 
 	base_size = main_content.size
 
+	offset_x.value = main_content.grid_spacing_offset.x
+	offset_y.value = main_content.grid_spacing_offset.y
+	size_x.value = main_content.grid_spacing_size.x
+	size_y.value = main_content.grid_spacing_size.y
+	gap_x.value = main_content.grid_spacing_gap.x
+	gap_y.value = main_content.grid_spacing_gap.y
 
 func _process(_delta):
 	if resizing: 
@@ -29,7 +42,7 @@ func _process(_delta):
 		new_size.x = max(new_size.x, min_size.x)
 		new_size.y = max(new_size.y, min_size.y)
 		size = new_size
-
+	
 func _gui_input(event : InputEvent):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
@@ -81,9 +94,11 @@ func update_zoom():
 func _on_offset_x_value_changed(value: float) -> void:
 	main_content.grid_spacing_offset.x = value
 	main_content.queue_redraw()
+
 func _on_offset_y_value_changed(value: float) -> void:
 	main_content.grid_spacing_offset.y = value
 	main_content.queue_redraw()
+
 func _on_size_x_value_changed(value: float) -> void:
 	main_content.grid_spacing_size.x = value
 	main_content.queue_redraw()
@@ -102,5 +117,4 @@ func _on_gap_y_value_changed(value: float) -> void:
 
 
 func _on_close_button_pressed() -> void:
-	print("end")
 	get_parent().queue_free()
