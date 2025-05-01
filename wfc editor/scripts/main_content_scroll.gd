@@ -16,28 +16,63 @@ func _ready():
 func _draw():
 	# Draw custom background color
 	var i : int = 0
-	var offset : float = 0.0
-	for x in range(sprite.position.x + grid_spacing_offset.x - grid_spacing_size.x, size.x, grid_spacing_size.x):
+	var _position : float = sprite.position.x + grid_spacing_offset.x
+	for x in range(_position, size.x, 1):
+		if _position > size.x: break
+
+		if i % 2 == 0:
+			var rect : Rect2 = Rect2(Vector2(_position, 0), Vector2(grid_spacing_size.x, size.y))
+			draw_rect(rect, grid_color, false)
+			_position += grid_spacing_size.x
+		else:
+			var rect : Rect2 = Rect2(Vector2(_position, 0), Vector2(grid_spacing_gap.x, size.y))
+			draw_rect(rect, Color(grid_color, 0.3), true)
+			_position += grid_spacing_gap.x
 		i+=1
-		offset += 0.0 if i % 2 == 0 else grid_spacing_gap.x
-		draw_line(Vector2(x + offset, 0), Vector2(x + offset, size.y), grid_color, -2)
+		
 	i = 0
-	offset = 0
-	for x in range(sprite.position.x + grid_spacing_offset.x, 0, -grid_spacing_size.x):
-		offset += 0.0 if i % 2 == 0 else grid_spacing_gap.x
-		draw_line(Vector2(x - offset, 0), Vector2(x - offset, size.y), grid_color)
+	_position = sprite.position.x + grid_spacing_offset.x
+	for x in range(_position, 0, -1):
+		if _position < 0: break
+
+		if i % 2 == 1:
+			var rect : Rect2 = Rect2(Vector2(_position, 0), Vector2(-grid_spacing_size.x, size.y))
+			draw_rect(rect, grid_color, false)
+			_position -= grid_spacing_size.x
+		else:
+			var rect : Rect2 = Rect2(Vector2(_position, 0), Vector2(-grid_spacing_gap.x, size.y))
+			draw_rect(rect, Color(grid_color, 0.3), true)
+			_position -= grid_spacing_gap.x
 		i+=1
+
 	i = 0
-	offset = 0
-	for y in range(sprite.position.y + grid_spacing_offset.y - grid_spacing_size.y, size.y, grid_spacing_size.y):
+	_position = sprite.position.y + grid_spacing_offset.y
+	for y in range(_position, size.y, 1):
+		if _position > size.y: break
+
+		if i % 2 == 0:
+			var rect : Rect2 = Rect2(Vector2(0, _position), Vector2(size.x, grid_spacing_size.y))
+			draw_rect(rect, grid_color, false)
+			_position += grid_spacing_size.y
+		else:
+			var rect : Rect2 = Rect2(Vector2(0, _position), Vector2(size.x, grid_spacing_gap.y))
+			draw_rect(rect, Color(grid_color, 0.3), true)
+			_position += grid_spacing_gap.y
 		i+=1
-		offset += 0.0 if i % 2 == 0 else grid_spacing_gap.y
-		draw_line(Vector2(0, y + offset), Vector2(size.x, y + offset), grid_color)
+		
 	i = 0
-	offset = 0
-	for y in range(sprite.position.y + grid_spacing_offset.y, 0, - grid_spacing_size.y):
-		offset += 0.0 if i % 2 == 0 else grid_spacing_gap.y
-		draw_line(Vector2(0, y-offset), Vector2(size.x, y-offset), grid_color)
+	_position = sprite.position.y + grid_spacing_offset.y
+	for y in range(_position, 0, -1):
+		if _position < 0: break
+
+		if i % 2 == 1:
+			var rect : Rect2 = Rect2(Vector2(0, _position), Vector2(size.x, -grid_spacing_size.y))
+			draw_rect(rect, grid_color, false)
+			_position -= grid_spacing_size.y
+		else:
+			var rect : Rect2 = Rect2(Vector2(0, _position), Vector2(size.x, -grid_spacing_gap.y))
+			draw_rect(rect, Color(grid_color, 0.3), true)
+			_position -= grid_spacing_gap.y
 		i+=1
 
 # Example function to change grid spacing dynamically
