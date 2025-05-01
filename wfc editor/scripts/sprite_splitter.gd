@@ -115,6 +115,5 @@ func _on_gap_y_value_changed(value: float) -> void:
 	main_content.grid_spacing_gap.y = value
 	main_content.queue_redraw()
 
-
 func _on_close_button_pressed() -> void:
 	get_parent().queue_free()

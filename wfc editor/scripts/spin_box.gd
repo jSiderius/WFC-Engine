@@ -20,3 +20,10 @@ func _input(event):
 		value += step
 	elif event.is_action_pressed("ui_down"):
 		value -= step
+
+
+func _on_add_pressed() -> void:
+	value += step
+
+func _on_subtract_pressed() -> void:
+	value -= step

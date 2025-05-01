@@ -25,3 +25,5 @@ res://src/main.gd
 res://wfc editor/scenes/spin_box.gd
 res://wfc editor/scripts/tile_menu_item.gd
 res://wfc editor/scripts/spin_box.gd
+res://wfc editor/scripts/main_content_scroll.gd
+res://wfc editor/resources/invis_button.tres

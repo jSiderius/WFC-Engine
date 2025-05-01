@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cex42gq7xbw5s"]
+[gd_scene load_steps=8 format=3 uid="uid://cex42gq7xbw5s"]
 
 [ext_resource type="Script" path="res://wfc editor/scripts/sprite_splitter.gd" id="1_l8iva"]
 [ext_resource type="Script" path="res://wfc editor/scripts/main_content_scroll.gd" id="2_dse3f"]
 [ext_resource type="Script" path="res://wfc editor/scripts/spin_box.gd" id="2_lh2kq"]
 [ext_resource type="Texture2D" uid="uid://6rr65xe0apqa" path="res://wfc editor/assets/zoom_out.svg" id="2_xa3cx"]
 [ext_resource type="Texture2D" uid="uid://64cstv6u4je8" path="res://wfc editor/assets/zoom_in.svg" id="3_53l1h"]
+[ext_resource type="Theme" uid="uid://d3ae7sd2jwyco" path="res://wfc editor/resources/invis_button.tres" id="3_of2m4"]
 [ext_resource type="Texture2D" uid="uid://csthmavorccln" path="res://tileset.png" id="5_npxeu"]
 
 [node name="SpriteSplitter" type="Control"]
@@ -82,6 +83,25 @@ custom_arrow_step = 10.0
 select_all_on_focus = true
 script = ExtResource("2_lh2kq")
 
+[node name="add" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 9.0
+scale = Vector2(1.31528, 2.64019)
+theme = ExtResource("3_of2m4")
+
+[node name="subtract" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 67.0
+offset_top = 20.5
+offset_right = 78.0
+offset_bottom = 28.5
+scale = Vector2(1.31528, 2.64019)
+
 [node name="Spacer3" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
@@ -98,6 +118,23 @@ update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
 script = ExtResource("2_lh2kq")
+
+[node name="add" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 9.0
+scale = Vector2(1.31528, 2.64019)
+theme = ExtResource("3_of2m4")
+
+[node name="subtract" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 67.0
+offset_top = 20.5
+offset_right = 78.0
+offset_bottom = 28.5
+scale = Vector2(1.31528, 2.64019)
 
 [node name="Spacer4" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
@@ -127,6 +164,23 @@ custom_arrow_step = 1.0
 select_all_on_focus = true
 script = ExtResource("2_lh2kq")
 
+[node name="add" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/SizeX"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 9.0
+scale = Vector2(1.31528, 2.64019)
+theme = ExtResource("3_of2m4")
+
+[node name="subtract" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/SizeX"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 67.0
+offset_top = 20.5
+offset_right = 78.0
+offset_bottom = 28.5
+scale = Vector2(1.31528, 2.64019)
+
 [node name="Spacer6" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
@@ -144,6 +198,23 @@ update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
 script = ExtResource("2_lh2kq")
+
+[node name="add" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/SizeY"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 9.0
+scale = Vector2(1.31528, 2.64019)
+theme = ExtResource("3_of2m4")
+
+[node name="subtract" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/SizeY"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 67.0
+offset_top = 20.5
+offset_right = 78.0
+offset_bottom = 28.5
+scale = Vector2(1.31528, 2.64019)
 
 [node name="Spacer7" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
@@ -171,6 +242,23 @@ custom_arrow_step = 1.0
 select_all_on_focus = true
 script = ExtResource("2_lh2kq")
 
+[node name="add" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/GapX"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 9.0
+scale = Vector2(1.31528, 2.64019)
+theme = ExtResource("3_of2m4")
+
+[node name="subtract" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/GapX"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 67.0
+offset_top = 20.5
+offset_right = 78.0
+offset_bottom = 28.5
+scale = Vector2(1.31528, 2.64019)
+
 [node name="Spacer9" type="Control" parent="Panel/VBoxContainer/Header1/HBoxContainer"]
 custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
@@ -186,6 +274,23 @@ update_on_text_changed = true
 custom_arrow_step = 1.0
 select_all_on_focus = true
 script = ExtResource("2_lh2kq")
+
+[node name="add" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/GapY"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 68.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 9.0
+scale = Vector2(1.31528, 2.64019)
+theme = ExtResource("3_of2m4")
+
+[node name="subtract" type="Button" parent="Panel/VBoxContainer/Header1/HBoxContainer/GapY"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 67.0
+offset_top = 20.5
+offset_right = 78.0
+offset_bottom = 28.5
+scale = Vector2(1.31528, 2.64019)
 
 [node name="Header2" type="Panel" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -315,11 +420,23 @@ size_flags_horizontal = 3
 mouse_filter = 2
 
 [connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX" to="Panel" method="_on_offset_x_value_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX/add" to="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX" method="_on_add_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX/subtract" to="Panel/VBoxContainer/Header1/HBoxContainer/OffsetX" method="_on_subtract_pressed"]
 [connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY" to="Panel" method="_on_offset_y_value_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY/add" to="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY" method="_on_add_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY/subtract" to="Panel/VBoxContainer/Header1/HBoxContainer/OffsetY" method="_on_subtract_pressed"]
 [connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeX" to="Panel" method="_on_size_x_value_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeX/add" to="Panel/VBoxContainer/Header1/HBoxContainer/SizeX" method="_on_add_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeX/subtract" to="Panel/VBoxContainer/Header1/HBoxContainer/SizeX" method="_on_subtract_pressed"]
 [connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeY" to="Panel" method="_on_size_y_value_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeY/add" to="Panel/VBoxContainer/Header1/HBoxContainer/SizeY" method="_on_add_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/SizeY/subtract" to="Panel/VBoxContainer/Header1/HBoxContainer/SizeY" method="_on_subtract_pressed"]
 [connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapX" to="Panel" method="_on_gap_x_value_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapX/add" to="Panel/VBoxContainer/Header1/HBoxContainer/GapX" method="_on_add_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapX/subtract" to="Panel/VBoxContainer/Header1/HBoxContainer/GapX" method="_on_subtract_pressed"]
 [connection signal="value_changed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapY" to="Panel" method="_on_gap_y_value_changed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapY/add" to="Panel/VBoxContainer/Header1/HBoxContainer/GapY" method="_on_add_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Header1/HBoxContainer/GapY/subtract" to="Panel/VBoxContainer/Header1/HBoxContainer/GapY" method="_on_subtract_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Header2/HBoxContainer/ZoomOutButton" to="Panel" method="_on_zoom_out_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Header2/HBoxContainer/ZoomInButton" to="Panel" method="_on_zoom_in_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Footer/HBoxContainer/Close Button" to="Panel" method="_on_close_button_pressed"]

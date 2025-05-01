@@ -35,7 +35,7 @@ func _draw():
 		draw_line(Vector2(0, y + offset), Vector2(size.x, y + offset), grid_color)
 	i = 0
 	offset = 0
-	for y in range(sprite.position.y + grid_spacing_offset.y, 0, -grid_spacing_size.y):
+	for y in range(sprite.position.y + grid_spacing_offset.y, 0, - grid_spacing_size.y):
 		offset += 0.0 if i % 2 == 0 else grid_spacing_gap.y
 		draw_line(Vector2(0, y-offset), Vector2(size.x, y-offset), grid_color)
 		i+=1
