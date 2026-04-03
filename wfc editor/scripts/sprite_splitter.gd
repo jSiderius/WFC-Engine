@@ -8,7 +8,8 @@ var resize_start_mouse = Vector2.ZERO
 var resize_start_size = Vector2.ZERO
 
 @onready var scroll = $VBoxContainer/MainContentScroll
-@onready var main_content = $VBoxContainer/MainContentScroll/MainContent
+@onready var main_content = %MainContent
+@onready var sprite_content = %SpriteContent
 
 @onready var offset_x : SpinBox = %OffsetX
 @onready var offset_y = %OffsetY
@@ -71,25 +72,24 @@ func _is_in_resize_zone(mouse_pos):
 
 
 func _on_zoom_out_button_pressed() -> void:
-	zoom_factor = min(zoom_factor + 0.1, zoom_max)
+	zoom_factor = min(zoom_factor - zoom_step, zoom_max)
 	update_zoom()
-	queue_redraw()
 
 func _on_zoom_in_button_pressed() -> void:
-	zoom_factor = max(zoom_factor - 0.1, zoom_min)
+	zoom_factor = max(zoom_factor + zoom_step, zoom_min)
 	update_zoom()
 
 var base_size : Vector2
 var zoom_factor : float = 1.0
 var zoom_min : float = 0.5
 var zoom_max : float = 3.0
+var zoom_step : float = 0.25
 func update_zoom():
 	# Apply scale to the content node
-	# TODO: Scaling
 	main_content.scale = Vector2(zoom_factor, zoom_factor)
 
-	scroll.scroll_horizontal = (main_content.size.x - scroll.size.x) / 2.0
-	scroll.scroll_vertical = (main_content.size.y - scroll.size.y) / 2.0
+	queue_redraw()
+	main_content.queue_redraw()
 
 func _on_offset_x_value_changed(value: float) -> void:
 	main_content.grid_spacing_offset.x = value
